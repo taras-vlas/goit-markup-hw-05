@@ -1,0 +1,29 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 528px;
+  height: 581px;
+  /* background-color: var(--primary-white-color);*/
+  background-color: var(--secondary-grey-color);
+}
+.backdrop.is-hidden {
+  /* "вскрыть" - спеціальні класи */
+  opacity: 1; /* 1 прозорість 100%; або 0 - 0% */
+  pointer-events: none; /* =вказівника позиція; none означає, що за умови дії класу is-hidden на елемент не діють події*/
+}
+
+.modal-one {
+  position: absolute; /* ! рекомендується 1)позиція, 2)геометрія, 3) інше */
+  top: 50%;
+  left: 50%;
+
+  min-width: 500px;
+  min-height: 530px;
+
+  transform: translate(
+    50%,
+    50%
+  ); /* позиціювання рекомендується саме таке: transform   JS*/
+  background-color: var(--accent-color);
+}

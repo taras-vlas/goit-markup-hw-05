@@ -10,10 +10,13 @@
   --secondary-grey-color: rgba(255, 255, 255, 0.6);
   --soc-icon-grey-color:  rgba(255, 255, 255, 0.1);
   --field-color:  rgba(47, 48, 58, 0.8);
-  --secondary-blacK-color: #000000;
+  --thumb-c-color: rgba(33, 150, 243, 0.9);  /* Голубой #2196f3 (33, 150, 243) 90% */
+  --secondary-black-color: #000000;
   --button-bckgr-color: #f5f4fa;
   --soc-icon-color: #AFB1B8;
   --border-no-color: #00; /* 00 - полностью прозрачный */
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 

@@ -1,13 +1,11 @@
 .backdrop {
   position: absolute; /* fixed; */
-  padding: 40px, 60px;
-  top: 0;
-  left: 0;
-  width: 528px;
-  height: 581px;
-  transform: translate(50%, 50%);
-  /* background-color: var(--primary-white-color);*/
-  background-color: var(--secondary-grey-color);
+  width: 1600px;
+  height: 1024px;
+  left: -10px;
+  top: 0px; 
+  /*transform: translate(50%, 50%);*/
+  background: rgba(0, 0, 0, 0.1);
   color: var(--primary-text-color);
   /* overflow: auto; /* скрол */
   opacity: 1;
@@ -27,29 +25,68 @@
 
 .modal-one {
   position: absolute; /* ! рекомендується 1)позиція, 2)геометрія, 3) інше */
-  top: 50%;
-  left: 50%;
-
-  min-width: 500px;
+   /* left: 529px;
+  top: 221px; */
+  /* top: 50%;
+  left: 50%; */
+  min-width: 470px;
   min-height: 530px;
 
   transform: translate(
     50%,
     50%
   ); /* позиціювання рекомендується саме таке: transform   JS*/
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.12);
+backdrop-filter: blur(1px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 4px;
+  background-color: var(--secondary-grey-color);
+  color: var(--primary-text-color);
   transform: translateX(50%) scale: (1);
   transition:all 100ms;
 }
 
 .data-modal-open {
-  position: absolute;
-  top: 15px;
-  right: 15px;
 }
+
 .data-modal-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: absolute; /* fixed; */
+  left: 0;
+  top: 0;
+  width: 531px;
+  height: 581px;
+
+  background-color: var(--secondary-grey-color);
+  color: var(--primary-text-color);
+  /* overflow: auto; /* скрол */
+  opacity: 1;
+  /* visibility: hidden; */
+}
+.icon-modal {
+  /* іконка <svg>*/
+  height: 18px;
+  width: 18px;
+  left: 8px;
+  top: 8px;
+  fill: var(--secondary-black-color); /* перед цим з sprite.svg видалити fill */
+}
+.icon-modal-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: 2px solid var(--primary-white-color);
+}
+.icon-modal-link:hover {
+  /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
+  outline: var(--accent-color);
+  transition: outline 250ms var(--timing-function);
+}
+ .icon-modal-link:hover .icon-modal {
+  /* hover на ссилку */
+  fill: var(--accent-color);
+  transition: outline 250ms var(--timing-function);
+  /* transition: opacity 250ms var(--timing-function); */
 }

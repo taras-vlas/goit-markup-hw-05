@@ -141,10 +141,11 @@ border: 1px solid black; */
   align-items: center;
   width: 100%;
   height: 100%;
-  top: 0;
+  bottom: -100%;
   right: 0;
   background-color: var(--no-color);
-  transform: translateY(100%); /* need 100: under text , if 0 on the text*/
+  transform: translateY(100%)
+  ); /* need 100: under text , if 0 on the text*/
   transition: transform 250ms var(--timing-function);
   overflow: hidden;
   opacity: 0;
@@ -224,6 +225,7 @@ border: 1px solid black; */
   padding-right: 24px;
   margin: 0;
   background-color: var(--primary-white-color);
+  
 }
 
 .name-work {

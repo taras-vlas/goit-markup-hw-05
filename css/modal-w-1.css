@@ -1,11 +1,11 @@
 .backdrop {
   position: absolute; /* fixed; */
   width: 1600px;
-  height: 1024px;
-  left: -10px;
-  top: 0px; 
-  /*transform: translate(50%, 50%);*/
-  background: rgba(0, 0, 0, 0.1);
+  height: 1024px; 
+  left: 0;
+  top: 0; 
+  transform: translate(31%, 71%);
+  background-color: rgba(0, 0, 0, 0.1);
   color: var(--primary-text-color);
   /* overflow: auto; /* скрол */
   opacity: 1;
@@ -24,67 +24,73 @@
 }
 
 .modal-one {
-  position: absolute; /* ! рекомендується 1)позиція, 2)геометрія, 3) інше */
+  position: fixed; /* ! рекомендується 1)позиція, 2)геометрія, 3) інше */
    /* left: 529px;
   top: 221px; */
-  /* top: 50%;
-  left: 50%; */
+  top: 0;
+  left: 0; 
   min-width: 470px;
-  min-height: 530px;
-
+  min-height: 500px;
+  padding: 30px,40px;
   transform: translate(
     50%,
     50%
   ); /* позиціювання рекомендується саме таке: transform   JS*/
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.12);
-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
 /* Note: backdrop-filter has minimal browser support */
-border-radius: 4px;
-  background-color: var(--secondary-grey-color);
+  border-radius: 4px;
+  background-color: var(--primary-white-color);
   color: var(--primary-text-color);
+  transition: background-color 250ms  var(--timing-function);
+  /* z-index: 2 ; */
   transform: translateX(50%) scale: (1);
   transition:all 100ms;
 }
 
-.data-modal-open {
-}
+.data-modal-open {}
 
-.data-modal-close {
-  position: absolute; /* fixed; */
-  left: 0;
-  top: 0;
-  width: 531px;
-  height: 581px;
-
-  background-color: var(--secondary-grey-color);
-  color: var(--primary-text-color);
-  /* overflow: auto; /* скрол */
-  opacity: 1;
-  /* visibility: hidden; */
-}
 .icon-modal {
   /* іконка <svg>*/
-  height: 18px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
   width: 18px;
-  left: 8px;
-  top: 8px;
+  height: 18px;
+  /*transform: translate(50%, 50%);*/
   fill: var(--secondary-black-color); /* перед цим з sprite.svg видалити fill */
+  align-items: center;
 }
-.icon-modal-link {
+.data-modal-close {
+  position: absolute; /* fixed; */
+  top: 13px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  outline: 2px solid var(--primary-white-color);
+  border: 2px solid var(--primary-white-color);
+ /*  outline: 2px solid var(--primary-white-color);*/
+  background-color: var(--primary-white-color);
+    /* overflow: auto; /* скрол */
+  opacity: 1;
+  /* visibility: hidden; */
+  
 }
-.icon-modal-link:hover {
+.data-modal-close:hover {
   /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
-  outline: var(--accent-color);
+  fill: var(--accent-color);
+  border: var(--accent-color);
   transition: outline 250ms var(--timing-function);
 }
- .icon-modal-link:hover .icon-modal {
+.data-modal-close:hover .icon-modal {
   /* hover на ссилку */
   fill: var(--accent-color);
   transition: outline 250ms var(--timing-function);

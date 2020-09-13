@@ -636,17 +636,22 @@
 
     <!-- модальне вікно, скрипт JS в modal.js-->
     <div class="backdrop is-hidden">
-      /* data-modal */
+      <!-- data-modal  -->
       <!--  <button type="button" data-modal-open>отркыть</button> -->
       <div class="modal-one" data-modal>
-        <!-- <p></p> -->
-        /* data- */
+        <!-- <p> data </p> -->
         <!--  <button type="button" data-modal-close>закрить</button> -->
-        <button type="button" data-modal-close>
+        <a
+          class="data-modal-close"
+          href="./images/main/sprite-cl-gn.svg#closelink"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="link закрить"
+        >
           <svg class="icon-modal">
             <use xlink:href="./images/main/sprite-cl-gn.svg#closelink"></use>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
 

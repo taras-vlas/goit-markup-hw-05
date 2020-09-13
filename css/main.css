@@ -70,7 +70,7 @@ h1 {
   background-color: var(--accent-color);
   color: var(--secondary-grey-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 
 section {
@@ -346,18 +346,17 @@ p {
   height: 44px;
   border-radius: 50%;
   background-color: var(--primary-white-color);
-
-  /*  background-color: var(--primary-white-color); */
 }
 .soc-icon-link:hover {
   /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
   background-color: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .soc-icon-item .soc-icon-link:hover .soc-icon {
   /* hover на ссилку */
   fill: var(--primary-white-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
+  /* transition: opacity 250ms var(--timing-function); */
 }
 
 /*  .soc-icon {
@@ -441,25 +440,25 @@ p {
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-o {
   fill: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-t {
   fill: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-th {
   fill: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-fr {
   fill: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-fv {
   fill: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-sx {
   fill: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }

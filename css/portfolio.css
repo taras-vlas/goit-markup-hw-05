@@ -167,7 +167,7 @@ border: 1px solid black; */
   background-color: var(--thumb-c-color);
   transform: translateY(100%); /*  need 0 , stay */
   transition: transform 250ms var(--timing-function);
-  opacity: 0; /* need 1 */
+  opacity: 1; /* need 1 */
 }
 
 .thumb-c:hover::before {
@@ -177,6 +177,7 @@ border: 1px solid black; */
 .block-li:hover .thumb-c::before {
   opacity: 1;
   transform: translateY(0);
+  transition: transform 250ms var(--timing-function);
 }
 
 /* структурні псевдокласи **** вище */

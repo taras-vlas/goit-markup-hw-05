@@ -2,9 +2,9 @@
   position: absolute; /* fixed; */
   width: 1600px;
   height: 1024px; 
-  left: 0;
+  left: -10px;
   top: 0; 
-  transform: translate(31%, 71%);
+  transform: translate(5%, 71%);
   background-color: rgba(0, 0, 0, 0.1);
   color: var(--primary-text-color);
   /* overflow: auto; /* скрол */

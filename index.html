@@ -638,21 +638,37 @@
     <div class="backdrop is-hidden">
       <!-- data-modal  -->
       <!--  <button type="button" data-modal-open>отркыть</button> -->
+      <!--     <a
+        class="icon-modal-link"
+        data-modal-open
+        href="./"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="link открыть"
+      >
+        <svg class="icon-modal">
+          <use href="./images/main/sprite-cl-gn.svg#closelink"></use>
+          <!-  <use href="./images/main/sprite-cl-gn.svg#ellipse30"></use>
+                  ->
+        </svg>
+      </a>
+      -->
       <div class="modal-one" data-modal>
         <!-- <p> data </p> -->
         <!--  <button type="button" data-modal-close>закрить</button> -->
         <a
-          class="data-modal-close"
+          class="icon-modal-link"
+          data-modal-close
           href="./index.html"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="link закрить"
+          aria-label="link закрыть"
         >
+          <svg class="icon-ellipse-modal">
+            <use href="./images/main/sprite-cl-gn.svg#circle"></use>
+          </svg>
           <svg class="icon-modal">
             <use href="./images/main/sprite-cl-gn.svg#closelink"></use>
-            <!--
-            <use href="./images/main/sprite-cl-gn.svg#ellipse30"></use>
-            -->
           </svg>
         </a>
       </div>

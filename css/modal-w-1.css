@@ -1,137 +1,22 @@
 .backdrop {
   position: fixed;
-  width: 100%;
-  height: 100%;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 1024px;
   background-color: var(--noel-color);
-
   /* overflow: auto; /* скрол */
-
-  /* visibility: hidden; */
+  /***transition: opacity 250ms var(--timing-function); */
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  /* visibility: visible;*/
 }
-.backdrop.is-hidden {
+.backdrop .is-hidden {
   /* "вскрыть" - спеціальні класи */
   opacity: 0; /* 1 прозорість 100%; або 0 - 0% */
+  /* visibility: hidden; /* блокує елементи під оверлеєм коли вікна backdrop вскрите */
   pointer-events: none; /* =вказівника позиція; none означає, що за умови дії класу is-hidden на елемент не діють події*/
-  /*visibility: hidden; */
 }
-
-.backdrop.is-hidden .modal-one {
-  transform: scale(0.9); /*translate(-50%, -50%); */
-}
-/*.is-hidden {
-  top: -100%;
-  transform: translate(-50%, -50%); } /* scale(0.1); */
-
-.modal-one {
-  position: absolute; /* ! рекомендується 1)позиція, 2)геометрія, 3) інше */
-  /* left: 529px;
-  top: 221px; */
-  top: 50%;
-  left: 50%;
-  width: 531px;
-  height: 581px;
-  min-width: 470px;
-  min-height: 500px;
-  padding: 30px, 40px;
-  /* позиціювання рекомендується саме таке: transform   JS*/
-  transform: translate(-50%, -50%); /* , scale:(1); */
-  transform: scale(
-    1
-  ); /* значення > або < 1 деє ефект прближення чи віддалення вікна*/
-
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
-    inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(1px);
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 4px;
-  background-color: var(--primary-white-color);
-  color: var(--primary-text-color);
-  transition: transform 250ms var(--timing-function) opacity 250ms
-    var(--timing-function);
-
-  /* transition: all 100ms;*/
-}
-
-.data-modal-open {
-}
-
-.data-modal-close {
-  position: absolute; /* fixed; */
-}
-.icon-modal {
-  /* іконка <svg>*/
-  position: absolute;
-  top: 19px;
-  right: 14px;
-  width: 18px;
-  height: 18px;
-
-  align-items: center;
-  fill: var(--secondary-black-color); /* перед цим з sprite.svg видалити fill */
-}
-
-.icon-modal-link {
-  position: absolute;
-  top: 13px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: var(--accent-color);
-  /*color: var(--primary-white-color);*/
-  background-color: var(--primary-white-color);
-  transform: translate(50%, 50%);
-  /* overflow: auto; /* скрол */
-  opacity: 1;
-  /* visibility: hidden; */
-}
-
-.icon-modal-link:hover {
-  /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
-  fill: var(--accent-color);
-  color: var(--accent-color);
-  transition: outline 250ms var(--timing-function);
-}
-.modal-one .icon-modal-link:hover .icon-modal {
-  /* hover на ссилку */
-  fill: var(--accent-color);
-  color: var(--accent-color);
-  transition: outline 250ms var(--timing-function);
-  /* transition: opacity 250ms var(--timing-function); */
-}
-
-.backdrop {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: var(--noel-color);
-  /* overflow: auto; /* скрол */
-  opacity: 1;
-  transition: opacity 250ms var(--timing-function);
-  display: flex;
-  justify-content: center;
-}
-.backdrop.is-hidden {
-  /* "вскрыть" - спеціальні класи */
-  opacity: 1; /* 1 прозорість 100%; або 0 - 0% */
-  pointer-events: none; /* =вказівника позиція; none означає, що за умови дії класу is-hidden на елемент не діють події*/
-  /*visibility: hidden; */
-}
-
-.backdrop.is-hidden .modal-one {
+.backdrop .is-hidden .modal-one {
   transform: scale(0.9); /*translate(-50%, -50%); */
 }
 /*.is-hidden {
@@ -144,22 +29,12 @@
   top: 221px; */
   top: 50%;
   left: 50%;
-  width: 531px;
+  width: 528px;
   height: 581px;
-  min-width: 470px;
-  min-height: 500px;
-  padding: 30px, 40px;
+  padding: 40px, 40px;
   /* позиціювання рекомендується саме таке: transform   JS*/
-  transform: translate(-50%, -50%); /* , scale:(1); */
-  transform: scale(
-    1
-  ); /* значення > або < 1 деє ефект прближення чи віддалення вікна*/
-
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-
+  transform: translate(-50%, -50%) scale(1);
+  /* , scale:(1); значення > або < 1 деє ефект прближення чи віддалення вікна*/
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
     inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.12);
   backdrop-filter: blur(1px);
@@ -167,58 +42,21 @@
   border-radius: 4px;
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
-  transition: transform 250ms var(--timing-function) opacity 250ms
+  /*** transition: transform 250ms var(--timing-function) opacity 250ms
     var(--timing-function);
 
-  transition: all 100ms;
+  transition: all 100ms; */
 }
 
-.data-modal-open {
-}
-
-.data-modal-close {
-  position: ; /* fixed; */
-}
 .icon-modal {
   /* іконка <svg>*/
   position: absolute;
-  top: 19px;
-  right: 14px;
+  padding: 0;
+  top: 8px;
+  right: 13px;
   width: 18px;
   height: 18px;
 
   align-items: center;
   fill: var(--secondary-black-color); /* перед цим з sprite.svg видалити fill */
-}
-
-.icon-modal-link {
-  position: absolute;
-  top: 13px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: var(--primary-white-color);
-  /*color: var(--primary-white-color);*/
-  background-color: var(--primary-white-color);
-  transform: translate(50%, 50%);
-  /* overflow: auto; /* скрол */
-  opacity: 1;
-  /* visibility: hidden; */
-}
-
-.icon-modal-link:hover {
-  /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
-  fill: var(--accent-color);
-  color: var(--accent-color);
-  transition: outline 250ms var(--timing-function);
-}
-.modal-one .icon-modal-link:hover .icon-modal {
-  /* hover на ссилку */
-  fill: var(--accent-color);
-  color: var(--accent-color);
-  transition: outline 250ms var(--timing-function);
-  /* transition: opacity 250ms var(--timing-function); */
 }

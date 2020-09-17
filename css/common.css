@@ -124,7 +124,8 @@ a {
 .site-nav .current:focus {
   color: var(--accent-color);
   text-decoration: none; /*праює тільки зі ссилками*/
-  transition: background-color 250ms  var(--timing-function);
+  transition: color 250ms  var(--timing-function),
+              opacity 250ms  var(--timing-function);
 }
 
 /* контакти:іконки mail-tel */
@@ -176,14 +177,16 @@ a {
 .aus-nav .e-mail:hover .cnts-e-icon,
 .aus-nav .smartphon:hover .cnts-s-icon {
   fill: var(--accent-color);
-  transition: background-color 250ms  var(--timing-function);
+  transition: fill 250ms  var(--timing-function),
+  opacity 250ms  var(--timing-function);
 }
 .aus-nav .e-mail:hover, 
 .aus-nav .e-mail:focus, 
 .aus-nav .smartphon:hover,
 .aus-nav .smartphon:focus {
  color: var(--accent-color);
- transition: background-color 250ms  var(--timing-function);
+ transition: color 250ms  var(--timing-function),
+ opacity 250ms  var(--timing-function);
 }
 
 /* :: finger і підкреслювання */
@@ -279,7 +282,8 @@ footer {
 .aus-footer:focus {
   /*ефект наведення M.2,Веб.З: 1.47.20 */
   color: var(--accent-color);
-  transition: background-color 250ms  var(--timing-function);
+  transition: color 250ms  var(--timing-function),
+  opacity 250ms  var(--timing-function);
 }
 .soccontact{
   /* padding-top: 75px;
@@ -332,13 +336,14 @@ letter-spacing: 0.03em;
 .fsoc-icon-link:hover {
   /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
   background-color: var(--accent-color);
-  transition: background-color 250ms  var(--timing-function);
+  transition: background-color 250ms  var(--timing-function),
+  opacity 250ms  var(--timing-function);
 }
 .fsoc-icon-item .fsoc-icon-link:hover .fsoc-icon {
     /* hover на ссилку */
   fill: var(--primary-white-color);
-  transition: background-color 250ms  var(--timing-function), 
-  /* transition: opacity 250ms var(--timing-function);*/
+  transition: fill 250ms  var(--timing-function), 
+  opacity 250ms var(--timing-function);
   
   
 }

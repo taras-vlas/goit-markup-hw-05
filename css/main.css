@@ -70,7 +70,9 @@ h1 {
   background-color: var(--accent-color);
   color: var(--secondary-grey-color);
 
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function),
+    opacity 250ms  var(--timing-function);
 }
 
 section {
@@ -281,6 +283,7 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  transition: box-shadow 250ms var(--timing-function);
 }
 /* структурні псевдокласи */
 .lu-staff .li-staff:nth-child(4n) {
@@ -350,13 +353,14 @@ p {
 .soc-icon-link:hover {
   /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
   background-color: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 .soc-icon-item .soc-icon-link:hover .soc-icon {
   /* hover на ссилку */
   fill: var(--primary-white-color);
-  transition: background-color 250ms var(--timing-function);
-  /* transition: opacity 250ms var(--timing-function); */
+  transition: fill 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 
 /*  .soc-icon {
@@ -388,6 +392,8 @@ p {
   background-color: var(--primary-white-color);
   border: 1px solid var(--soc-icon-color); /* рамка */
   border-radius: 4px;
+  transition: border 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 
   /* margin: 0;
   margin-bottom: 30px;
@@ -440,25 +446,31 @@ p {
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-o {
   fill: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-t {
   fill: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-th {
   fill: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-fr {
   fill: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-fv {
   fill: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 .clts-icon-item .clts-icon-link:hover .clts-icon-sx {
   fill: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }

@@ -75,8 +75,8 @@
           ДЛЯ ВАШЕГО БИЗНЕСА
         </h1>
         <!-- order - Отображение кнопки  или-->
-        <!-- service - Указываем ссыпку -->
-        <button class="button" data-modal-open>Заказать услугу</button>
+        <!-- service - Указываем ссыпку  без href=  -->
+        <a href="#" class="button" data-modal-open>Заказать услугу</a>
       </section>
       <!-- section advantage  - Секция преимуществ -->
 
@@ -636,42 +636,30 @@
 
     <!-- модальне вікно, скрипт JS в modal.js-->
 
-    <div class="backdrop is-hidden">
-      <!-- data-modal  -->
-      <!--  <button type="button" data-modal-open>отркыть</button> -->
-      <!-- <a
-        class="button icon-modal-link"
-        data-modal-open=""
-        href="./"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="link открыть"
-      >
-        <svg class="icon-ellipse-modal">
+    <div class="backdrop is-hidden" data-modal>
+      <!--     <a class="close-modal-link" data-modal-open="">
+        
+        <svg class="icon-ellipse-modal" width="30" , right="30">
           <use href="./images/main/sprite-cl-gn.svg#circle"></use>
         </svg>
-        <svg class="icon-modal">
+        <svg class="icon-modal" width="18" , right="18">
           <use href="./images/main/sprite-cl-gn.svg#closelink"></use>
         </svg>
-      </a> -->
-      <!--    -->
-      <div class="backdrop">
-        <div class="modal-one" data-modal>
-          <p>Оставьте свои данные, мы вам перезвоним</p>
-          <div class="content-modal flexbox-modal">
-            <!--    <button class="button" href="">Отправить</button> -->
-            <!--  <button type="button" data-modal-close>закрить</button> -->
-            <button
-              class="icon-modal"
-              href=""
-              data-modal-close
-              aria-label="Закрыть"
-            >
-              <svg width="18" , height="18">
-                <use href="./images/main/sprite-cl-gn.svg#closelink"></use>
-              </svg>
-            </button>
-          </div>
+       
+      </a>
+       -->
+
+      <div class="modal-one">
+        <p>Оставьте свои данные, мы вам перезвоним</p>
+        <div class="content-modal flexbox-modal">
+          <!--    <button class="button" href="">Отправить</button> -->
+          <!--  <button type="button" data-modal-close>закрить</button> -->
+          <button class="button-modal-close" data-modal-close="">
+            <!--  <a href="#" class="button link" data-modal-close>-->
+            <svg class="icon-modal-close" width="18" , height="18">
+              <use href="./images/main/sprite-cl-gn.svg#closelink"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>

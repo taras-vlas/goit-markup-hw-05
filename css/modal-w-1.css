@@ -55,6 +55,8 @@
   border-radius: 50%;
   border: 1px solid var(--title-text-color);
   background-color: var(--primary-white-color);
+   transition: background-color 250ms var(--timing-function),
+   opacity 250ms  var(--timing-function);
 }
 /* overflow: auto; /* скрол */
 /* visibility: hidden; */
@@ -68,6 +70,8 @@
   width: 18px;
   height: 18px;
   fill: var(--primary-text-color); /* перед цим з sprite.svg видалити fill */
+    transition: fill 250ms var(--timing-function),
+  opacity 250ms  var(--timing-function);
 }
 
 .is-hidden {
@@ -79,12 +83,8 @@
   /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
   /* fill: var(--accent-color); */
   color: var(--accent-color);
-  transition: fill 250ms var(--timing-function),
-  opacity 250ms  var(--timing-function);
 }
 .modal-one .button-modal-close:hover .icon-modal-close {
   /* hover на ссилку */
   fill: var(--accent-color);
-  transition: opacity 250ms var(--timing-function),
-  opacity 250ms  var(--timing-function);
 }

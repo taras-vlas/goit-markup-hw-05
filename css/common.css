@@ -119,13 +119,14 @@ a {
 .site-nav .current{
   display: block; /* зняти зазор перед елементом справа (для inline block - не застосовується)*/
   color: var(--accent-color);
+  transition: color 250ms  var(--timing-function),
+              opacity 250ms  var(--timing-function);
 }
 .site-nav .link:hover,
 .site-nav .current:focus {
   color: var(--accent-color);
   text-decoration: none; /*праює тільки зі ссилками*/
-  transition: color 250ms  var(--timing-function),
-              opacity 250ms  var(--timing-function);
+
 }
 
 /* контакти:іконки mail-tel */
@@ -172,6 +173,7 @@ a {
 }
 .aus-nav .mail-smartf + .mail-smartf {    /* <li>  */
   margin-left: 30px;
+
 }
 
 .aus-nav .e-mail:hover .cnts-e-icon,
@@ -185,8 +187,6 @@ a {
 .aus-nav .smartphon:hover,
 .aus-nav .smartphon:focus {
  color: var(--accent-color);
- transition: color 250ms  var(--timing-function),
- opacity 250ms  var(--timing-function);
 }
 
 /* :: finger і підкреслювання */
@@ -277,13 +277,13 @@ footer {
   margin-top: 9px; 
   color: var(--secondary-grey-color);
   direction: column;
+  transition: color 250ms  var(--timing-function),
+  opacity 250ms  var(--timing-function);
 }
 .aus-footer:hover,
 .aus-footer:focus {
   /*ефект наведення M.2,Веб.З: 1.47.20 */
   color: var(--accent-color);
-  transition: color 250ms  var(--timing-function),
-  opacity 250ms  var(--timing-function);
 }
 .soccontact{
   /* padding-top: 75px;
@@ -320,7 +320,8 @@ letter-spacing: 0.03em;
   height: 20px;
   width: 20px;
   fill: var(--button-bckgr-color); /* перед цим з sprite.svg видалити fill */
-
+  transition: fill 250ms  var(--timing-function), 
+  opacity 250ms var(--timing-function);
 }
  .fsoc-icon-item .fsoc-icon-link{
   /* ссилка <a> */
@@ -331,21 +332,17 @@ letter-spacing: 0.03em;
   height: 44px;
   border-radius: 50%;
   background-color: var(--soc-icon-grey-color);
+  transition: background-color 250ms  var(--timing-function),
+  opacity 250ms  var(--timing-function);
   /*  background-color: var(--primary-white-color); */
 }
 .fsoc-icon-link:hover {
   /* задаємо колір на ссилку при hover, Практ. №8 2.04.20  */
   background-color: var(--accent-color);
-  transition: background-color 250ms  var(--timing-function),
-  opacity 250ms  var(--timing-function);
 }
 .fsoc-icon-item .fsoc-icon-link:hover .fsoc-icon {
     /* hover на ссилку */
   fill: var(--primary-white-color);
-  transition: fill 250ms  var(--timing-function), 
-  opacity 250ms var(--timing-function);
-  
-  
 }
 
 /*  .soc-icon {
